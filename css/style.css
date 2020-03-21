@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+ :root {
+  --col-bg: #ffffff;
+  --col-bg-fg: #ededed;
+  --col-main:  #5d73fa;
+  --col-secondary: #ffbbab;
+  --col-font-main:  #4c4c4c;
+  --col-font-secondary: #8c8c8c;
+  --font-main: 'Open Sans', sans-serif;
+}
+
+body {
+ background-color: var(--col-bg);
+ color: var(--col-font-main);
+ font-family: var(--font-main);
+ font-size: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.25;
+  margin: 0.25em 0;
+}

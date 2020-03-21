@@ -1,8 +1,8 @@
-CHAT INTERFACE
+#CHAT INTERFACE
 
-Layout Set Up.
+##Layout Set Up.
 
-Color Scheme:
+###Color Scheme:
 
   --col-bg: #ffffff;
   --col-bg-fg: #ededed;
@@ -11,7 +11,7 @@ Color Scheme:
   --col-font-main:  #4c4c4c;
   --col-font-secondary: #8c8c8c;
   
-  Fonts:
+  ###Fonts:
   
   'Proxima Nova'|| 'Open Sans';
   --font-body: serif;

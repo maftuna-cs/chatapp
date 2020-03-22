@@ -48,6 +48,8 @@ h1, h2, h3, h4, h5, h6 {
     top: 0;
     left: -100%;
     position: fixed;
+    padding-top: 2em;
+    z-index: 3;
 }
 
 .sidebar.panel {
@@ -61,4 +63,62 @@ h1, h2, h3, h4, h5, h6 {
 
 .sidebar.open.panel {
     opacity: 1;
+}
+
+.sidebar-toggle {
+    background-color: var(--col-main);
+    color: var(--col-bg);
+    position: fixed;
+    top: 0.5em;
+    left: 1em;
+    line-height: 1.25;
+    padding: 0 .5em;
+    border: none;
+    z-index: 4;
+}
+
+.chat {
+    padding: 0 1em;
+    margin-top: 2em;
+}
+
+@media screen and (min-width: 40em) {
+
+    .sidebar {
+        display: block;
+        left: 0;
+        z-index: 1;
+        width: 20em;
+        opacity: 1;
+    }
+
+    .sidebar.open ~ .chat {
+        margin-left: 20em;
+    }
+
+    .sidebar-toggle{
+        position: absolute;
+        top: 3em;
+        left: auto;
+        right: -1.5em;
+        width: 1.5em;
+        height: 5em;
+        padding: .25em;
+        text-align: center;
+    }
+
+    .sidebar-toggle span {
+        writing-mode: vertical-rl;
+    }
+}
+
+@media screen and (min-width: 60em) {
+
+    .sidebar {
+        width: 30em;
+    }
+
+    .chat {
+        margin-left: 30em;
+    }
 }

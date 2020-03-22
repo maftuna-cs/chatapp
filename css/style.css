@@ -31,14 +31,14 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   width: 100%;
 }
-
+/* 
 .logo {
    display: inline-block;
    position: absolute;
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-}
+} */
 
 .sidebar {
     background: var(--col-secondary);
@@ -55,6 +55,7 @@ h1, h2, h3, h4, h5, h6 {
 .sidebar.panel {
     opacity: 0;
     overflow-y: scroll;
+    transition: opacity 0.3s;
 }
 
 .sidebar.open {
@@ -70,7 +71,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--col-bg);
     position: fixed;
     top: 0.5em;
-    left: 1em;
+    /* left: 20em; */
     line-height: 1.25;
     padding: 0 .5em;
     border: none;
@@ -90,25 +91,24 @@ h1, h2, h3, h4, h5, h6 {
         z-index: 1;
         width: 20em;
         opacity: 1;
+        transform: translateX(-10em); 
+        transition: transform 0.3s; 
     }
 
     .sidebar.open ~ .chat {
         margin-left: 20em;
     }
 
-    .sidebar-toggle{
-        position: absolute;
-        top: 3em;
-        left: auto;
-        right: -1.5em;
-        width: 1.5em;
-        height: 5em;
-        padding: .25em;
-        text-align: center;
+    .sidebar.open {
+        transform: translateX(0em);
     }
 
-    .sidebar-toggle span {
+    /* .sidebar-toggle span {
         writing-mode: vertical-rl;
+    } */
+
+    .chat {
+        transition: margin-left 0.3s;
     }
 }
 

@@ -5,6 +5,7 @@
   --col-bg-fg: #ededed;
   --col-main:  #5d73fa;
   --col-secondary: #ffbbab;
+  --col-border: #e6e6e6;
   --col-font-main:  #4c4c4c;
   --col-font-secondary: #8c8c8c;
   --font-main: 'Open Sans', sans-serif;
@@ -30,6 +31,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   width: 100%;
+  text-align: center;
 }
 /* 
 .logo {
@@ -41,7 +43,8 @@ h1, h2, h3, h4, h5, h6 {
 } */
 
 .sidebar {
-    background: var(--col-secondary);
+    background: var(--col-bg);
+    /* border: 1px solid var(--col-font-secondary); */
     width: 100%;
     height: 100%;
     padding: 1em 2em;
@@ -78,10 +81,63 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 4;
 }
 
+.search {
+    
+   
+
+}
+
 .chat {
     padding: 0 1em;
     margin-top: 2em;
 }
+
+.chat-list {
+    border-left: 1px solid var(--col-font-secondary);
+    border-right: 1px solid var(--col-font-secondary);
+   
+}
+
+.chat-list-item {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+}
+
+.chat-img {
+    float: left;
+    width: 2.5em;
+    height: 2.5em;
+    margin-right: .75em;
+    border-radius: 50%;
+}
+
+.chat-list-name {
+    font-size: .875em;
+    line-height: 1.3em;
+    font-weight: 600;
+}
+
+.chat-list-time {
+    font-size: .875em;
+    position: absolute;
+    top: 1em;
+    right: 10%;
+    padding: 0 0 5px 5px;
+    background: var(--col-bg);
+    color: var(--col-font-secondary);
+}
+
+.chat-list-pre {
+    font-size: .875em;
+    display: inline-block;
+    overflow: hidden;
+    width: 70%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: var(--col-font-secondary);
+}
+
 
 @media screen and (min-width: 40em) {
 
@@ -91,12 +147,12 @@ h1, h2, h3, h4, h5, h6 {
         z-index: 1;
         width: 20em;
         opacity: 1;
-        transform: translateX(-10em); 
+        transform: translateX(-15em); 
         transition: transform 0.3s; 
     }
 
     .sidebar.open ~ .chat {
-        margin-left: 20em;
+        margin-left: 10em;
     }
 
     .sidebar.open {
@@ -115,10 +171,11 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (min-width: 60em) {
 
     .sidebar {
-        width: 30em;
+        width: 20em;
     }
 
     .chat {
-        margin-left: 30em;
+        margin-left: 15em;
     }
+
 }

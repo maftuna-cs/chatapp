@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .sidebar {
     background: var(--col-bg);
-    /* border: 1px solid var(--col-font-secondary); */
+    border: 1px solid var(--col-font-secondary);
     width: 100%;
     height: 100%;
     padding: 1em 2em;
@@ -92,16 +92,50 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 2em;
 }
 
-.chat-list {
+/* .chat-list {
     border-left: 1px solid var(--col-font-secondary);
     border-right: 1px solid var(--col-font-secondary);
+    width: calc(100% + .125em);
+    margin-left: -1px;
    
-}
+} */
 
 .chat-list-item {
     position: relative;
     width: 100%;
     cursor: pointer;
+    padding: .75em 10% 1em;
+    background: var(--col-bg);
+}
+
+.chat-list-item:hover {
+    background: var(--col-main);
+    width: calc(100% + .125em);
+    padding-top: .8125em;
+    margin-top: -1px;
+    margin-left: -1px;
+    border: none;
+}
+
+.chat-list-item span:hover {
+    color: var(--col-bg);
+}
+
+.chat-list-item:hover::after {
+    display: none;
+}
+
+.chat-list-item::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 80%;
+    height: 1px;
+    bottom: 0;
+    left: 50%;
+    background: var(--col-font-secondary);
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
 }
 
 .chat-img {
@@ -124,7 +158,7 @@ h1, h2, h3, h4, h5, h6 {
     top: 1em;
     right: 10%;
     padding: 0 0 5px 5px;
-    background: var(--col-bg);
+    /* background: var(--col-bg); */
     color: var(--col-font-secondary);
 }
 

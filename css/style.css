@@ -82,9 +82,49 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .search {
-    
-   
+    position: relative;
+    width: 100%;
+    height: 4em;
+    /* padding: 1em; */
+    margin-top: 1em;
 
+}
+
+.search::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: block;
+  width: 80%;
+  height: 1px;
+  content: '';
+  background-color: var(--col-font-secondary);
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.search input {
+    float:left;
+    width: 11em;
+    height: 2.6em;
+    padding: 0 1em;
+    border: 1px solid var(--col-font-secondary);
+    border-radius: 1.3em;
+}
+
+.search input:focus {
+    outline: none;
+}
+
+.new-msg {
+    display: block;
+    float: left;
+    width: 2.625em;
+    height: 2.625em;
+    margin-left: .625em;
+    background: var(--col-main);
+    color: black;
+    border-radius: 50%;
 }
 
 .chat {
@@ -181,12 +221,14 @@ h1, h2, h3, h4, h5, h6 {
         z-index: 1;
         width: 20em;
         opacity: 1;
-        transform: translateX(-15em); 
-        transition: transform 0.3s; 
+        transform: translateX(-30em); 
+        transition: transform 0.8s; 
     }
 
     .sidebar.open ~ .chat {
-        margin-left: 10em;
+        margin-left: 20em;
+        transition: margin-left 0.8s;
+        /* transition: transform 0.8s;  */
     }
 
     .sidebar.open {
@@ -198,7 +240,8 @@ h1, h2, h3, h4, h5, h6 {
     } */
 
     .chat {
-        transition: margin-left 0.3s;
+        transition: margin-left 0.8s;
+        
     }
 }
 
@@ -209,7 +252,12 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .chat {
-        margin-left: 15em;
+        margin-left: 2em;
+        /* transform: translateX(-30em);  */
+        /* transition: transform 0.8s; */
+        transition: margin-left 0.8s;
     }
+
+    
 
 }

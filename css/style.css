@@ -208,6 +208,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 3em;
     padding: 1em 2em;
     background: var(--col-font-secondary);
+    margin-bottom: 2em;
 }
 
 .chat-title span {

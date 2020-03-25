@@ -5,10 +5,12 @@
   --col-bg-fg: #ededed;
   --col-main:  #5d73fa;
   --col-secondary: #ffbbab;
+  --col-gradient: linear-gradient(150deg, rgb(85, 51, 255) 15%, rgb(5, 213, 255) 70%, rgb(166, 255, 203) 94%);
   --col-border: #e6e6e6;
   --col-font-main:  #4c4c4c;
   --col-font-secondary: #c5c5c5;
   --font-main: 'Open Sans', sans-serif;
+  --box-shadow: 1px 3px 20px rgba(17, 17, 17, 0.1);
 }
 
 body {
@@ -26,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
 .topbar {
   position: fixed;
   overflow: hidden;
-  background-color: var(--col-main);
+  background: var(--col-gradient);
   z-index: 2;
   top: 0;
   left: 0;
@@ -45,8 +47,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sidebar {
-    background: var(--col-bg);
-    border: 1px solid var(--col-font-secondary);
+    background: var(--col-gradient);
     width: 100%;
     height: 100%;
     padding: 1em 2em;
@@ -89,7 +90,6 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     width: 100%;
     height: 4em;
-    /* padding: 1em; */
     margin-top: 2em;
 
 }
@@ -115,9 +115,10 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 2.5em;
     padding: 0 1em;
-    border: 1px solid var(--col-font-secondary);
+    border: 1px solid var(--col-border);
     border-radius: 1.3em;
-    background: var(--col-font-secondary);
+    background: var(--col-border);
+    box-shadow: var(--box-shadow);
 }
 
 .search input:focus {
@@ -145,7 +146,6 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     cursor: pointer;
     padding: .75em 10% 1em;
-    background: var(--col-bg);
 }
 
 .chat-list-item:hover {
@@ -170,30 +170,32 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     display: block;
     width: 80%;
-    height: 1px;
+    height: .04em;
     bottom: 0;
     left: 50%;
-    background: var(--col-font-secondary);
+    background: var(--col-border);
     -webkit-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
 }
 
 .chat-img {
     float: left;
-    width: 2.5em;
-    height: 2.5em;
+    width: 3em;
+    height: 3em;
     margin-right: .75em;
     border-radius: 50%;
+    box-shadow: var(--box-shadow);
 }
 
 .chat-list-name {
     font-size: .875em;
     line-height: 1.3em;
     font-weight: 600;
+    color: var(--col-bg);
 }
 
 .chat-list-time {
-    font-size: .875em;
+    font-size: .8em;
     position: absolute;
     top: 1em;
     right: 10%;
@@ -215,9 +217,12 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 3em;
     padding: 1em 2em;
-    background: var(--col-font-secondary);
+    background: var(--col-bg);
+    border-radius: .5em;
     margin-bottom: 2em;
+    box-shadow: var(--box-shadow);
 }
+
 
 .chat-title span {
     font-size: 1em;
@@ -279,13 +284,15 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--col-bg);
     border: 1px solid var(--col-main);
     border-radius: 14px 14px 0 14px;
+    box-shadow: var(--box-shadow);
 }
 
 .other-msg .msg-text {
-    background: var(--col-font-secondary);
+    background: var(--col-border);
     color: var(--col-font-main);
-    border: 1px solid var(--col-font-secondary);
+    border: 1px solid var(--col-border);
     border-radius: 14px 14px 14px 0;
+    box-shadow: var(--box-shadow);
 }
 
 .conv-span span::after {
@@ -349,9 +356,6 @@ h1, h2, h3, h4, h5, h6 {
         transform: translateX(0em);
     }
 
-    /* .sidebar-toggle span {
-        writing-mode: vertical-rl;
-    } */
 
     .chat {
         transition: margin-left 0.8s;
@@ -367,8 +371,6 @@ h1, h2, h3, h4, h5, h6 {
 
     .chat {
         margin-left: 2em;
-        /* transform: translateX(-30em);  */
-        /* transition: transform 0.8s; */
         transition: margin-left 0.8s;
     }
 

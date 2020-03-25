@@ -1,8 +1,12 @@
-#CHAT INTERFACE
+KIDS CLUB COMMUNITY APPLICATION
 
-##Layout Set Up.
+FOR MEMBER PARENTS AND CLUB INSTUCTORS
 
-###Color Scheme:
+-CLICK THE TOGGLE BUTTON 
+
+Layout Set Up.
+
+Color Scheme:
 
   --col-bg: #ffffff;
   --col-bg-fg: #ededed;
@@ -11,7 +15,7 @@
   --col-font-main:  #4c4c4c;
   --col-font-secondary: #8c8c8c;
   
-  ###Fonts:
+  Fonts:
   
   'Proxima Nova'|| 'Open Sans';
   --font-body: serif;

@@ -53,8 +53,6 @@ export default function Dashboard() {
                        <div>{chat.from}</div>
                        <div className="msg-text" varient='p'>{chat.msg}</div>    
                    </div>
-                  
-
                     ))
                 } 
             </div> 
@@ -63,6 +61,7 @@ export default function Dashboard() {
                 <div id="msg-form">
                     <i class="fas fa-paperclip fa-2x attach-icon"></i>
                     <input type="text" placeholder="type a message" />
+                    <button>Send</button>
                 </div>
             </footer>
 

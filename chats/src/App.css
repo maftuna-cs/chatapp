@@ -311,11 +311,12 @@ h1, h2, h3, h4, h5, h6 {
 #msg-form {
     display: grid;
     grid-area: msg-form;
-    grid: 51px / 32px 1fr;
+    grid: 51px / 32px 1fr 32px;
     grid-gap: .7em;
     border-radius: 0 0 10px 0;
     border-top: 1px solid rgba(0,0,0,0.25);
     padding-left: 2.6em;
+    padding-right: 2.6em;
     padding-right: 1.3em;
     align-content: center;
     align-items: center;

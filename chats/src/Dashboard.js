@@ -45,7 +45,19 @@ export default function Dashboard() {
                 </span>
             </div>
 
+            <div class="msg-bot me-msg">
+                {
+                    [{from: 'user', msg: 'hello'}].map((chat, i) => (
+                   
+                   <div className="msg-content" key={i}>
+                       <div>{chat.from}</div>
+                       <div className="msg-text" varient='p'>{chat.msg}</div>    
+                   </div>
+                  
 
+                    ))
+                } 
+            </div> 
 
             <footer>
                 <div id="msg-form">

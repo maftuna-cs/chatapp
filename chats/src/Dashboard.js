@@ -1,6 +1,8 @@
 import React from 'react'
 
 export default function Dashboard() {
+
+    const [textValue, changeTextValue] = React.useState ('');
     return (
         <div className="app">
             <header className="topbar">
@@ -60,7 +62,7 @@ export default function Dashboard() {
             <footer>
                 <div id="msg-form">
                     <i class="fas fa-paperclip fa-2x attach-icon"></i>
-                    <input type="text" placeholder="type a message" />
+                    <input type="text" placeholder="type a message" value={textValue} onChange={e => changeTextValue('e.target.value')}/>
                     <button>Send</button>
                 </div>
             </footer>

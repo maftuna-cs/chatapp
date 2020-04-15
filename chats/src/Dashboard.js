@@ -62,7 +62,7 @@ export default function Dashboard() {
             <footer>
                 <div id="msg-form">
                     <i class="fas fa-paperclip fa-2x attach-icon"></i>
-                    <input type="text" placeholder="type a message" value={textValue} onChange={e => changeTextValue('e.target.value')}/>
+                    <input type="text" placeholder="type a message" value={textValue} onChange={e => changeTextValue(e.target.value)}/>
                     <button>Send</button>
                 </div>
             </footer>

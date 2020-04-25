@@ -1,5 +1,6 @@
 import React from 'react'
-import { checkPropTypes } from 'prop-types';
+import io from 'socket.io-client'
+// import { checkPropTypes } from 'prop-types';
 
 export const CTX = React.createContext();
 
@@ -64,12 +65,19 @@ function reducer(state, action) {
     }
 }
 
+let socket;
+
 export default function Store(props) {
 
-    const reducerHook = React.useReducer(reducer, initState);
+    if (!socket) {
+        socket = io(':3001')
+
+    }
+
+    const [allChats] = React.useReducer(reducer, initState);
 
     return (
-        <CTX.Provider value={reducerHook}>
+        <CTX.Provider value={{allChats}}>
             {props.children}
         </CTX.Provider>
     )

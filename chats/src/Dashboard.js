@@ -5,7 +5,7 @@ export default function Dashboard() {
 
     // CTX store
 
-    const [allChats] = React.useContext(CTX);
+    const {allChats} = React.useContext(CTX);
 
     console.log({allChats});
 

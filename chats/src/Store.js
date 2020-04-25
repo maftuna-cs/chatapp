@@ -1,7 +1,7 @@
 import React from 'react'
 import { checkPropTypes } from 'prop-types';
 
-const CTX = React.createContext();
+export const CTX = React.createContext();
 
 /*
 

@@ -1,5 +1,6 @@
 import React from 'react'
-import { checkPropTypes } from 'prop-types';
+import io from 'socket.io-client'
+// import { checkPropTypes } from 'prop-types';
 
 export const CTX = React.createContext();
 
@@ -64,12 +65,32 @@ function reducer(state, action) {
     }
 }
 
+
+let socket;
+
+function sendChatAction(value) {
+    socket.emit('chat message', value);
+
+}
+
 export default function Store(props) {
 
-    const reducerHook = React.useReducer(reducer, initState);
+    const [allChats, dispatch] = React.useReducer(reducer, initState);
+
+    if (!socket) {
+        socket = io(':3001');
+        socket.on('chat message', function(msg){
+            dispatch({type:'RECEIVE_MESSAGE', payload: msg});
+          });
+
+    }
+
+    const user = 'pianoclass' + Math.random(100).toFixed(2)
+
+    
 
     return (
-        <CTX.Provider value={reducerHook}>
+        <CTX.Provider value={{allChats, sendChatAction, user}}>
             {props.children}
         </CTX.Provider>
     )

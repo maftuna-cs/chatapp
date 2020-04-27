@@ -1,23 +1,3 @@
-KIDS CLUB COMMUNITY APPLICATION
-
-FOR MEMBER PARENTS AND CLUB INSTUCTORS
-
--CLICK THE TOGGLE BUTTON 
-
-Layout Set Up.
-
-Color Scheme:
-
-  --col-bg: #ffffff;
-  --col-bg-fg: #ededed;
-  --col-main:  #5d73fa;
-  --col-secondary: #ffbbab;
-  --col-font-main:  #4c4c4c;
-  --col-font-secondary: #8c8c8c;
-  
-  Fonts:
-  
-  'Proxima Nova'|| 'Open Sans';
-  --font-body: serif;
-  --font-heading: sans-serif;
+✅ READY TO GRADE
+KIDS CLUB | KIDS COMMUNITY APP FOR PARENTS AND KIDS CLUB
 
